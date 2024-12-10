@@ -1,0 +1,686 @@
+/* ===== RESET STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(to bottom, #1c1c2c, #121212);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #8e44ad;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ae62d4;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #121212;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ae62d4;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+}
+
+nav a {
+    margin-left: 20px;
+    font-size: 1em;
+    color: #8e44ad;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ae62d4;
+}
+
+/* ===== HERO SECTION ===== */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 103px 200px;
+    background: #1c1c2c;
+    text-align: left;
+}
+
+.main-content h1 {
+    font-size: 3.5em;
+    color: #ae62d4;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1.2em;
+    color: #dcdde1;
+    margin-bottom: 20px;
+}
+
+.main-content h2 {
+    font-size: 2.2em;
+    color: #8e44ad;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    background: #8e44ad;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #ae62d4;
+    transform: translateY(-5px);
+}
+
+.hero-image {
+    width: 40%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ece0f5, #d8c1eb, #c5a3e1, #a874d2, #9556c8, #813cb9, #813cb9, #652f90);
+    background-size: 400%;
+    animation: moveRGB 3s linear infinite;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-5px); 
+}
+
+@keyframes moveRGB {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 100px 50px;
+    background: #121212;
+    text-align: left; 
+}
+
+.about img {
+    flex: 1; 
+    max-width: 40%; 
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.about-text {
+    flex: 1; 
+    max-width: 50%; 
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    color: #ae62d4;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.8; 
+    color: #dcdde1;
+    margin-bottom: 20px;
+}
+
+/* Responsiveness untuk layar kecil */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .about img {
+        max-width: 80%; 
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 2em;
+    }
+
+    .about-text p {
+        font-size: 1em; 
+    }
+}
+
+/* ===== SKILLS SECTION ===== */
+.skill-section {
+    padding: 50px;
+    text-align: center;
+    background: #1c1c2c;
+}
+
+.skill-section h2 {
+    font-size: 2.5em;
+    color: #8e44ad;
+    margin-bottom: 30px;
+}
+
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-icons img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-icons img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* ===== PROJECT SECTION ===== */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    justify-content: center;
+}
+
+
+
+.project-card {
+    background: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-info h2 {}
+.project-info h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #ae62d4;    
+}
+
+.project-info p {
+    font-size: 1em;
+    color: #16d0e8fc;
+    margin-top: 10px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: #1c1c2c;
+    color: #dcdde1;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    margin: 50px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* ===== DOWNLOAD CV BUTTON ===== */
+.download-cv {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 188px; /* Reduced padding */
+    font-size: 100-px; /* Smaller font size */
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(90deg,  #ece0f5, #d8c1eb, #c5a3e1, #a874d2, #9556c8, #813cb9, #813cb9, #652f90);
+    background-size: 400%;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+    animation: moveRGB 3s linear infinite;
+    transition: transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 480px; /* Fixed width */
+}
+
+.download-cv:hover {
+    transform: translateY(-5px); 
+}
+
+/* Animasi Gerakan RGB */
+@keyframes moveRGB {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+    position: relative;
+    width: 100%;
+    background: #121212;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.contact-form .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+/* ===== FORM INPUTS ===== */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #8e44ad;
+    border-radius: 15px;
+    background: #1c1c2c;
+    color: #dcdde1;
+    outline: none;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ae62d4;
+    background: #232334;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.contact-form button {
+display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(90deg,  #ece0f5, #d8c1eb, #c5a3e1, #a874d2, #9556c8, #813cb9, #813cb9, #652f90);
+    background-size: 400%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: moveRGB 3s linear infinite;
+    transition: transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes moveRGB {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* FORM CONTAINER */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1c1c2c;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* INPUT FIELDS */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #8e44ad;
+    border-radius: 8px;
+    background: #2b2b3d;
+    color: #ffffff;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* HOVER & FOCUS EFFECTS */
+form input:focus,
+form textarea:focus {
+    border-color: #ae62d4;
+    background: #1e1e2b;
+    box-shadow: 0 0 8px rgba(174, 98, 212, 0.8);
+}
+
+/* TEXTAREA SPECIFIC STYLING */
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* SUBMIT BUTTON */
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #8e44ad, #ae62d4);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER EFFECT */
+form button:hover {
+    background: linear-gradient(90deg, #ae62d4, #8e44ad);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(174, 98, 212, 0.6);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9em;
+    }
+
+    form button {
+        font-size: 1em;
+    }
+}
+
+/* Tombol Submit */
+button {
+    background-color: #652f90;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, var(--primary-color), var(--button-hover));
+}
+
+/* Footer Container */
+footer {
+    width: 100%; 
+    text-align: center;
+    padding: 20px 12px; 
+    background-color: #121212;
+    color: #dcdde1;
+    box-sizing: border-box; 
+}
+
+/* Footer Heading */
+footer h4 {
+    font-size: 1.5em;
+    color: #8e44ad;
+    margin-bottom: 15px;
+    font-weight: bold; 
+}
+
+/* Footer Links */
+footer a {
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #8e44ad;
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ae62d4; 
+}
+
+/* Footer Paragraph */
+footer p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #dcdde1;
+}
+
+/* Responsif untuk Layar Kecil */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer h4 {
+        font-size: 1.2em;
+    }
+
+    footer a {
+        font-size: 1em;
+        margin: 0 5px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+/* Light Theme */
+body.light-mode {
+    background: #fbfbfb;
+    color: #121212;
+}
+
+body.light-mode header {
+    background: #f0f0f0;
+}
+
+body.light-mode .skill-card,
+body.light-mode .project-card {
+    background: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode footer {
+    background: #f0f0f0;
+    color: #555;
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .main-content h1 {
+        font-size: 1.8em;
+    }
+
+    .main-content p {
+        font-size: 0.9em;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .about img {
+        max-width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 1.8em;
+    }
+
+    .about-text p {
+        font-size: 0.9em;
+    }
+
+    .skill-icons img {
+        width: 60px;
+        height: 60px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer h4 {
+        font-size: 1.2em;
+    }
+
+    footer a {
+        font-size: 0.9em;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#theme-toggle:hover {
+    color: #ae62d4;
+}
+
+/* Light Theme */
+body.light-mode {
+    background: #fbfbfb;
+    color: #121212;
+}
+
+body.light-mode header {
+    background: #f0f0f0;
+}
+
+body.light-mode .skill-card,
+body.light-mode .project-card {
+    background: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode footer {
+    background: #f0f0f0;
+    color: #555;
+}
